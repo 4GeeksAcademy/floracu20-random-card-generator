@@ -3,27 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      rel="shortcut icon"
+      href="https://w7.pngwing.com/pngs/902/280/png-transparent-ace-of-spades-playing-card-ace-of-hearts-spades-game-angle-king-thumbnail.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body
+    class="container-fluid bg-success m-3 d-flex flex-column align-items-center"
+  >
+    <div class="d-flex flex-column align-items-center">
+      <button id="nuevaCarta" class="btn btn-danger">Nueva carta</button>
+      <h6 class="p-1" style="font-style: italic;">
+        (Se generará una carta tamaño estándar cada 10 segundos)
+      </h6>
+    </div>
+    <div id="card" class="card">
+      <div id="top-card">
+        <p>♥</p>
       </div>
+      <div id="number-card">
+        <p>1</p>
+      </div>
+      <div id="foot-card">
+        <p>♥</p>
+      </div>
+    </div>
+    <div>
+      <h6>Modifique altura <strong>o</strong> ancho de la carta actual:</h6>
+      <label><strong>Altura: </strong></label>
+      <input
+        for="height"
+        type="number"
+        id="height"
+        min="80"
+        placeholder="Ej: 420"
+      />px
+      <label><strong> | Ancho: </strong></label>
+      <input
+        for="width"
+        type="number"
+        id="width"
+        min="80"
+        placeholder="Ej: 300"
+      />px
+      <p style="color: white;">
+        ⚠️ El valor mínimo recomendado es 80px.
+      </p>
     </div>
   </body>
 </html>
